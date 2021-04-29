@@ -5,10 +5,10 @@ using ExileCore.Shared.Helpers;
 using SharpDX;
 
 
-namespace DelveWalls
+namespace Mgnb
 {
 
-    public class DelveWalls : BaseSettingsPlugin<Settings>
+    public class Mgnb : BaseSettingsPlugin<Settings>
     {
 
         private IngameUIElements _inGameUi;
