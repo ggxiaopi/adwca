@@ -3,7 +3,7 @@ using ExileCore.Shared.Interfaces;
 using ExileCore.Shared.Nodes;
 using SharpDX;
 
-namespace DelveWalls
+namespace Mgnb
 {
     //All properties and public fields of this class will be saved to file
     public class Settings : ISettings
