@@ -54,15 +54,16 @@ namespace DelveWalls
             foreach (var e in entities)
             {
                 if (e.Path.Contains("Resonator") && DrawArrow(e)
-                    || e.Path.Contains("2_1") && DrawArrow(e)
-                    || e.Path.Contains("1_2") && DrawArrow(e)
-                    || e.Path.Contains("1_3") && DrawArrow(e)
-                    || e.Path.Contains("Fossil") && DrawArrow(e)
-                    || e.Path.Contains("Unique") && DrawArrow(e)
+//                     || e.Path.Contains("2_1") && DrawArrow(e)
+//                     || e.Path.Contains("1_2") && DrawArrow(e)
+//                     || e.Path.Contains("1_3") && DrawArrow(e)
+//                     || e.Path.Contains("Unique") && DrawArrow(e)
                     || e.Path.Contains("Currency") && DrawArrow(e)
-                    || e.Path.Contains("DelveWall") && DrawArrow(e)
-                    || e.Path.Contains("DelveMiningSuppliesFlares") && DrawArrow(e)
-                    || e.Path.Contains("DelveMiningSuppliesDynamite") && DrawArrow(e))
+                    || e.Path.Contains("Fossil") && DrawArrow(e)
+//                    || e.Path.Contains("DelveWall") && DrawArrow(e)
+//                     || e.Path.Contains("DelveMiningSuppliesFlares") && DrawArrow(e)
+//                     || e.Path.Contains("DelveMiningSuppliesDynamite") && DrawArrow(e)
+)
                 {
                     return;
                 }
@@ -92,56 +93,56 @@ namespace DelveWalls
 
 
             // If node contains X or Y chests/walls then change direction arrow color.
-            if (e.Path.Contains("Fossil"))
-            {
-                Graphics.DrawImage("directions.png", rectDirection, dir, Settings.FossilColor);
-                Graphics.DrawText(("Fossil"), TextName, Color.White, 10, FontAlign.Center);
-            }
 
-            if (e.Path.Contains("Unique"))
-            {
-                Graphics.DrawImage("directions.png", rectDirection, dir, Settings.UniqueColor);
-                Graphics.DrawText(("Unique"), TextName, Color.White, 10, FontAlign.Center);
-            }
+
+//             if (e.Path.Contains("Unique"))
+//             {
+//                 Graphics.DrawImage("directions.png", rectDirection, dir, Settings.UniqueColor);
+//                 Graphics.DrawText(("Unique"), TextName, Color.White, 10, FontAlign.Center);
+//             }
 
             // Rich, Pure azurite nodes
-            if (e.Path.Contains("1_2")
-                || e.Path.Contains("1_3")
-                || e.Path.Contains("2_1"))
-            {
-                Graphics.DrawImage("directions.png", rectDirection, dir, Settings.AzuriteColor);
-                Graphics.DrawText(("Azurite Node"), TextName, Color.White, 10, FontAlign.Center);
-            }
+//             if (e.Path.Contains("1_2")
+//                 || e.Path.Contains("1_3")
+//                 || e.Path.Contains("2_1"))
+//             {
+//                 Graphics.DrawImage("directions.png", rectDirection, dir, Settings.AzuriteColor);
+//                 Graphics.DrawText(("Azurite Node"), TextName, Color.White, 10, FontAlign.Center);
+//             }
 
-            if (e.Path.Contains("Resonator"))
-            {
-                Graphics.DrawImage("directions.png", rectDirection, dir, Settings.ResColor);
-                Graphics.DrawText(("Resonator"), TextName, Color.White, 10, FontAlign.Center);
-            }
+//             if (e.Path.Contains("Resonator"))
+//             {
+//                 Graphics.DrawImage("directions.png", rectDirection, dir, Settings.ResColor);
+//                 Graphics.DrawText(("Resonator"), TextName, Color.White, 10, FontAlign.Center);
+//             }
 
             if (e.Path.Contains("Currency"))
             {
                 Graphics.DrawImage("directions.png", rectDirection, dir, Settings.CurrencyColor);
                 Graphics.DrawText(("Currency"), TextName, Color.White, 10, FontAlign.Center);
             }
-
-            if (e.Path.Contains("DelveWall"))
+            if (e.Path.Contains("Fossil"))
             {
-                Graphics.DrawImage("directions.png", rectDirection, dir, Settings.WallColor);
-                Graphics.DrawText(("Delve Wall"), TextName, Color.White, 10, FontAlign.Center);
+                Graphics.DrawImage("directions.png", rectDirection, dir, Settings.FossilColor);
+                Graphics.DrawText(("Fossil"), TextName, Color.White, 10, FontAlign.Center);
             }
+//             if (e.Path.Contains("DelveWall"))
+//             {
+//                 Graphics.DrawImage("directions.png", rectDirection, dir, Settings.WallColor);
+//                 Graphics.DrawText(("Delve Wall"), TextName, Color.White, 10, FontAlign.Center);
+//             }
 
-            if (e.Path.Contains("DelveMiningSuppliesFlares"))
-            {
-                Graphics.DrawImage("directions.png", rectDirection, dir, Settings.FlareColor);
-                Graphics.DrawText(("Flares"), TextName, Color.White, 10, FontAlign.Center);
-            }
+//             if (e.Path.Contains("DelveMiningSuppliesFlares"))
+//             {
+//                 Graphics.DrawImage("directions.png", rectDirection, dir, Settings.FlareColor);
+//                 Graphics.DrawText(("Flares"), TextName, Color.White, 10, FontAlign.Center);
+//             }
 
-            if (e.Path.Contains("DelveMiningSuppliesDynamite"))
-            {
-                Graphics.DrawImage("directions.png", rectDirection, dir, Settings.DynaColor);
-                Graphics.DrawText(("Dynamite"), TextName, Color.White, 10, FontAlign.Center);
-            }
+//             if (e.Path.Contains("DelveMiningSuppliesDynamite"))
+//             {
+//                 Graphics.DrawImage("directions.png", rectDirection, dir, Settings.DynaColor);
+//                 Graphics.DrawText(("Dynamite"), TextName, Color.White, 10, FontAlign.Center);
+//             }
 
             return true;
         }
