@@ -110,11 +110,11 @@ namespace DelveWalls
 //                 Graphics.DrawText(("Azurite Node"), TextName, Color.White, 10, FontAlign.Center);
 //             }
 
-//             if (e.Path.Contains("Resonator"))
-//             {
-//                 Graphics.DrawImage("directions.png", rectDirection, dir, Settings.ResColor);
-//                 Graphics.DrawText(("Resonator"), TextName, Color.White, 10, FontAlign.Center);
-//             }
+            if (e.Path.Contains("Resonator"))
+            {
+                Graphics.DrawImage("directions.png", rectDirection, dir, Settings.ResColor);
+                Graphics.DrawText(("Resonator"), TextName, Color.White, 10, FontAlign.Center);
+            }
 
             if (e.Path.Contains("Currency"))
             {
