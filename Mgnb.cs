@@ -54,9 +54,9 @@ namespace Mgnb
             foreach (var e in entities)
             {
                 if (e.Path.Contains("Resonator") && DrawArrow(e)
-//                     || e.Path.Contains("2_1") && DrawArrow(e)
-//                     || e.Path.Contains("1_2") && DrawArrow(e)
-//                     || e.Path.Contains("1_3") && DrawArrow(e)
+                     || e.Path.Contains("2_1") && DrawArrow(e)
+  //                   || e.Path.Contains("1_2") && DrawArrow(e)
+ //                    || e.Path.Contains("1_3") && DrawArrow(e)
 //                     || e.Path.Contains("Unique") && DrawArrow(e)
                     || e.Path.Contains("Currency") && DrawArrow(e)
                     || e.Path.Contains("Fossil") && DrawArrow(e)
@@ -102,13 +102,11 @@ namespace Mgnb
 //             }
 
             // Rich, Pure azurite nodes
-//             if (e.Path.Contains("1_2")
-//                 || e.Path.Contains("1_3")
-//                 || e.Path.Contains("2_1"))
-//             {
-//                 Graphics.DrawImage("directions.png", rectDirection, dir, Settings.AzuriteColor);
-//                 Graphics.DrawText(("Azurite Node"), TextName, Color.White, 10, FontAlign.Center);
-//             }
+             if (e.Path.Contains("2_1"))
+            {
+                 Graphics.DrawImage("directions.png", rectDirection, dir, Settings.AzuriteColor);
+                 Graphics.DrawText(("Azurite Node"), TextName, Color.White, 10, FontAlign.Center);
+             }
 
             if (e.Path.Contains("Resonator"))
             {
